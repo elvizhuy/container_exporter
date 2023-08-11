@@ -8,5 +8,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags="-w -s" -o 
 FROM alpine:3
 COPY --from=builder /go/bin/container_exporter /go/bin/container_exporter
 EXPOSE 19092
-ENTRYPOINT ["/go/bin/docker_state_exporter"]
+ENTRYPOINT ["/go/bin/container_exporter"]
 CMD ["-listen-address=:19092"]
