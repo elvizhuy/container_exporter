@@ -7,6 +7,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags="-w -s" -o 
 
 FROM alpine:3
 COPY --from=builder /go/bin/docker_state_exporter /go/bin/docker_state_exporter
-EXPOSE 8080
+EXPOSE 19092
 ENTRYPOINT ["/go/bin/docker_state_exporter"]
-CMD ["-listen-address=:8080"]
+CMD ["-listen-address=:19092"]
