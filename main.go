@@ -202,7 +202,7 @@ func main() {
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "<h1>docker state exporter</h1>")
+		fmt.Fprintf(w, "<h1>container exporter</h1>")
 	})
 
 	http.HandleFunc("/-/healthy", func(w http.ResponseWriter, r *http.Request) {
