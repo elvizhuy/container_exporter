@@ -3,7 +3,7 @@ module huynn.com/m
 go 1.21.0
 
 require (
-	github.com/docker/docker v20.10.21+incompatible
+	github.com/docker/docker v24.0.5+incompatible
 	github.com/go-kit/kit v0.12.0
 	github.com/prometheus/client_golang v1.16.0
 )
